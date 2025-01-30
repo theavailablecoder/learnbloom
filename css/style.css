@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Handlee", cursive;
   font-weight: bold;
   line-height: 1.2;
-  color: #00394f;
+  color: #001f4f;
 }
 
 h1, .h1 {
@@ -629,7 +629,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1140px;
+    max-width: 1297px;
   }
 }
 
@@ -2373,14 +2373,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #17a2b8;
-  border-color: #17a2b8;
+  background-color: #889afb;
+    border-color: #889afb;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #138496;
-  border-color: #117a8b;
+  background-color: #687cf0;
+  border-color: #687cf0;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -2410,8 +2410,8 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #00394f;
-  border-color: #00394f;
+  background-color: #000e56;
+  border-color: #000e56;
 }
 
 .btn-secondary:hover {
@@ -6358,7 +6358,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #17a2b8 !important;
+  background-color: #5866B0 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6368,7 +6368,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #00394f !important;
+  background-color: #4d5caa !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -8014,6 +8014,9 @@ button.bg-dark:focus {
 }
 
 @media (min-width: 576px) {
+  body{
+    overflow-x: hidden;
+  }
   .m-sm-0 {
     margin: 0 !important;
   }
@@ -9528,7 +9531,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #17a2b8 !important;
+  color: #fff !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9721,7 +9724,8 @@ a.text-dark:hover, a.text-dark:focus {
   display: inline-block;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #17a2b8;
+  color: #5866B0;
+ 
 }
 
 .section-title span {
@@ -9737,7 +9741,7 @@ a.text-dark:hover, a.text-dark:focus {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #17a2b8;
+  background: #5866B0;
 }
 
 [class^=flaticon-]:before,
@@ -9774,7 +9778,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #17a2b8;
+  color: #5866B0
 }
 
 @media (max-width: 991.98px) {
@@ -9873,8 +9877,9 @@ a.text-dark:hover, a.text-dark:focus {
   background: url('../img/about3.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white; /* Ensure the text color contrasts */
-  background-attachment: scroll; /* Default scroll for mobile */
+  background-attachment: fixed; /* Fixes the background */
 }
+
 
 .class::before {
   content: "";
@@ -9918,9 +9923,9 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   align-items: center;
   position: relative;
-  color: #17B6DD;
+  color: #5866B0;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 1px;
  margin-bottom: 2rem;
 }
@@ -9932,7 +9937,7 @@ a.text-dark:hover, a.text-dark:focus {
   bottom: 50%;
   width: 60px; /* Adjust the line length */
   height: 2px; /* Adjust the line thickness */
-  background-color: #17A2B8; /* Adjust the line color */
+  background-color: #5866B0; /* Adjust the line color */
   transform: translateY(50%);
 }
 
@@ -9952,13 +9957,120 @@ a.text-dark:hover, a.text-dark:focus {
 
 
 
+/* Book Section */
+.book-section {
+  padding: 40px 20px;
+}
+
+.book-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Book Container */
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px; /* Limits max width for better alignment */
+  margin: 0 auto;
+}
+
+/* Book Card */
+.book {
+  position: relative; /* Required for pseudo-element positioning */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 20px); /* 4 books per row */
+  text-align: center;
+  transition: transform 0.3s;
+  overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+}
+
+/* Pseudo-element for the background image with reduced opacity */
+.book::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/—Pngtree—blue\ watercolor\ graffiti_2895135.png');
+  background-size: cover;
+  background-position: left;
+  opacity: 0.3; /* Adjust the opacity as needed (0.5 = 50% opacity) */
+  z-index: -1; /* Places the pseudo-element behind the content */
+  border-radius: 8px; /* Match the parent's border-radius */
+}
+.book:hover {
+  transform: scale(1.1);
+}
+
+/* Book Image */
+.book img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* Book Title */
+.book h3 {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #00394f;
+}
 
 
 
 
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .book {
+      width: calc(33.33% - 20px); /* 3 books per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .book {
+      width: calc(50% - 20px); /* 2 books per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .book {
+      width: 100%; /* 1 book per row */
+  }
+}
+
+
+
+.top-bar {
+  background-color: #5866B0 !important;
+}
+
+
+
+.fa-map-marker-alt{
+ color: orange;
+}
 
 
 
 
+.fa-envelope{
+color: #55ADDA;
+}
+.fa-phone{
+  color: var(--green);
+}
+
+
+.get{
+  color: #001F4F !important;
+}
 

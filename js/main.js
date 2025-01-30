@@ -111,3 +111,21 @@
 
 
 
+
+
+
+// Get the collapse element
+const navbarCollapse = document.getElementById('navbarNav');
+const navbarToggler = document.querySelector('.navbar-toggler');
+
+// Add event listener for when collapse is shown
+navbarCollapse.addEventListener('show.bs.collapse', () => {
+  console.log('Navbar opening');
+  navbarToggler.classList.add('active');
+});
+
+// Add event listener for when collapse is hidden
+navbarCollapse.addEventListener('hide.bs.collapse', () => {
+  console.log('Navbar closing');
+  navbarToggler.classList.remove('active');
+});
